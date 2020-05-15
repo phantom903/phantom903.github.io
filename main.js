@@ -12,7 +12,10 @@ function loadJson() {
 function populateCards(jsonData) {
   //var jsonData = JSON.parse(json);
   for (var [key, value] of Object.entries(jsonData)) {
-    console.log(value);
+    //console.log(value);
+    for (var [key1, value1] of Object.entries(value)) {
+      console.log(key1, value1);
+    }
   }
   // Object.entries(jsonData).forEach(element => {
   //   console.log(element);
