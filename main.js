@@ -11,7 +11,7 @@ function loadJson() {
 
 function populateCards(jsonData) {
   //var jsonData = JSON.parse(json);
-  jsonData.entries.forEach(element => {
+  Object.entries(jsonData).forEach(element => {
     console.log(element);
     var cardHeader = document.createElement("h4");
     cardHeader.setAttribute("class", "card-title");
