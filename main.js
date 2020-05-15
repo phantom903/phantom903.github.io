@@ -9,8 +9,8 @@ function loadJson() {
   }
 }  
 
-function populateCards(json) {
-  var jsonData = JSON.parse(json);
+function populateCards(jsonData) {
+  //var jsonData = JSON.parse(json);
   jsonData.cards.forEach(element => {
     var cardHeader = document.createElement("h4");
     cardHeader.setAttribute("class", "card-title");
