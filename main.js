@@ -25,7 +25,9 @@ function populateCards(jsonData) {
         var cardLink = document.createElement("a");
         cardLink.setAttribute("href", value2["url"]);
         cardLink.innerHTML = value2["name"];
-        cardContent.appendChild(cardLink);
+        var linkContainer = document.createElement("p");
+        linkContainer.appendChild(cardLink)
+        cardContent.appendChild(linkContainer);
       }
       
       var cardBlock = document.createElement("div");
