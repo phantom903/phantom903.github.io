@@ -21,28 +21,24 @@ function populateCards(jsonData) {
 
       var cardContent = document.createElement("p");
       cardContent.setAttribute("class", "card-text");
-      for (var [url, name] of Object.entries(value1["links"])) {}
+      for (var [url, name] of Object.entries(value1["links"])) {
         var cardLink = document.createElement("a");
         cardLink.setAttribute("href", url);
         cardLink.innerHTML = name;
         cardContent.appendChild(cardLink);
       }
+      
+      var cardBlock = document.createElement("div");
+      cardBlock.setAttribute("class", "card-block");
+      cardBlock.appendChild(cardHeader);
+      cardBlock.appendChild(cardContent);
+
+      var newCard = document.createElement("div");
+      newCard.setAttribute("class", "card text-center");
+      newCard.appendChild(cardBlock);
+
+      document.getElementById("cards").appendChild(newCard);
     }
   }
-  // Object.entries(jsonData).forEach(element => {
-  //   console.log(element);
-
-
-
-
-  //   var cardBlock = document.createElement("div");
-  //   cardBlock.setAttribute("class", "card-block");
-  //   cardBlock.appendChild(cardHeader);
-  //   cardBlock.appendChild(cardContent);
-    
-  //   var newCard = document.createElement("div");
-  //   newCard.setAttribute("class", "card text-center");
-  //   newCard.appendChild(cardBlock);
-  // });
-
+}
 
