@@ -1,6 +1,13 @@
 function loadJson() {
 //  var json = require("./settings.json");
-  var json = fetch("./settings.json");
+  var json;
+  var xmlRequest = new XMLHttpRequest();
+  xmlRequest.open("GET", "http://phantom903.github.io/settings.json");
+  xmlRequest.responseType = "json";
+  xmlRequest.send();
+  xmlRequest.onload = function () {
+    json = request.response;
+  }
   return JSON.parse(json);
 }  
 
