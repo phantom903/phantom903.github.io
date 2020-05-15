@@ -5,12 +5,12 @@ function loadJson() {
   xmlRequest.responseType = "json";
   xmlRequest.send();
   xmlRequest.onload = function () {
-    return JSON.parse(xmlRequest.response);
+    populateCards(xmlRequest.response);
   }
 }  
 
-function populateCards() {
-  var jsonData = loadJson();
+function populateCards(json) {
+  var jsonData = JSON.parse(json);
   jsonData.cards.forEach(element => {
     var cardHeader = document.createElement("h4");
     cardHeader.setAttribute("class", "card-title");
