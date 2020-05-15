@@ -1,5 +1,13 @@
-function loadJson(theme) {
+function loadJson() {
 //  var json = require("./settings.json");
+  var theme = 0;
+  var anXmlRequest = new XMLHttpRequest();
+  anXmlRequest.open("GET", "https://phantom903.github.io/user.json");
+  anXmlRequest.responseType = "json";
+  anXmlRequest.send();
+  anXmlRequest.onload = function () {
+    theme = anXmlRequest.response["theme"];
+  }
   var xmlRequest = new XMLHttpRequest();
   xmlRequest.open("GET", "https://phantom903.github.io/settings.json");
   xmlRequest.responseType = "json";
