@@ -75,12 +75,10 @@
   ],
   "pallettes": [
     {
-      "default": {
-        "name": "default",
-        "bgcolor": "#272822",
-        "fgcolor": "#f8f8f2",
-        "colors": [ "#75715e", "#f92672", "#fd971f", "#e69f66", "#e6db74", "#a6e22e", "#66d9ef", "#ae81ff" ]
-      }
+      "name": "default",
+      "bgcolor": "#272822",
+      "fgcolor": "#f8f8f2",
+      "colors": [ "#75715e", "#f92672", "#fd971f", "#e69f66", "#e6db74", "#a6e22e", "#66d9ef", "#ae81ff" ]
     }
   ]
 }
