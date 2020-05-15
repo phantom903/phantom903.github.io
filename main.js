@@ -11,8 +11,8 @@ function loadJson() {
 
 function populateCards(jsonData) {
   //var jsonData = JSON.parse(json);
-  for (var element of Object.entries(jsonData)) {
-    console.log(element);
+  for (var [key, value] of Object.entries(jsonData)) {
+    console.log(value);
   }
   // Object.entries(jsonData).forEach(element => {
   //   console.log(element);
