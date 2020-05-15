@@ -47,4 +47,5 @@ function populateCards(jsonData) {
 
 function drawDoc(jsonData) {
   document.body.style.backgroundColor = jsonData["pallettes"][0]["bgcolor"];
+  document.getElementById("jumbotron").style.backgroundColor = jsonData["pallettes"][0]["bgcolor"];
 }
