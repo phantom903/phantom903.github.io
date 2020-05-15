@@ -26,7 +26,7 @@ function populateCards(jsonData) {
       cardLink.setAttribute("href", value1["url"]);
       cardLink.innerHTML = value1["name"];
       var linkContainer = document.createElement("p");
-      linkContainer.appendChild(cardLink)
+      linkContainer.appendChild(cardLink);
       cardContent.appendChild(linkContainer);
     }
     
@@ -36,7 +36,7 @@ function populateCards(jsonData) {
     cardBlock.appendChild(cardContent);
 
     var newCard = document.createElement("div");
-    newCard.setAttribute("class", "card text-center");
+    newCard.setAttribute("class", "card text-center border-0");
     newCard.appendChild(cardBlock);
 
     document.getElementById("cards").appendChild(newCard);
@@ -62,6 +62,14 @@ function drawDoc(jsonData) {
   var alllinks = document.getElementsByTagName("a");
   for (var i = 0; i < alllinks.length; i++) {
     alllinks[i].style.color = pallette[Math.floor(Math.random() * pallette.length)];
-    document.styleSheets[0].insertRule(".a:hover { color: " + jsonData["pallettes"][0]["fgcolor"] + "; }", document.styleSheets[0].cssRules.length);
+    alllinks[i].style.fontSize = "1.2rem";
+    alllinks[i].style.textDecoration = "none";
   }
-}
+  $("a").hover(function () {
+    $(this).css("color", jsonData["pallettes"][0]["fgcolor"]);
+    $(this).css("font-size", "1.6rem");
+  }, function () {
+      $(this).css("color", pallette[Math.floor(Math.random() * pallette.length)]);
+      $(this).css("font-size", "1.2rem");
+  });
+ }
