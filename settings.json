@@ -2,8 +2,6 @@
   "cards": [
     {
       "title": "daily",
-      "colour1": "#ffffff",
-      "colour2": "#abedsd",
       "links": [
         {
           "name": "reddit",
@@ -17,8 +15,6 @@
     },
     {
       "title": "uni",
-      "colour1": "#ffffff",
-      "colour2": "#abedsd",
       "links": [
         {
           "name": "ou studenthome",
@@ -36,8 +32,6 @@
     },
     {
       "title": "gaming",
-      "colour1": "#ffffff",
-      "colour2": "#abedsd",
       "links": [
         {
           "name": "r/gaming",

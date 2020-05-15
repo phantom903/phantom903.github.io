@@ -11,36 +11,36 @@ function loadJson() {
 
 function populateCards(jsonData) {
   //var jsonData = JSON.parse(json);
-  for (var [key, value] of Object.entries(jsonData)) {
+  for (var [key, value] of Object.entries(jsonData["cards"])) {
     //console.log(value);
-    for (var [key1, value1] of Object.entries(value)) {
-      //console.log(key1, value1);
-      var cardHeader = document.createElement("h4");
-      cardHeader.setAttribute("class", "card-title");
-      cardHeader.innerHTML = value1["title"];
+    //for (var [key1, value1] of Object.entries(value)) {
+    //console.log(key1, value1);
+    var cardHeader = document.createElement("h4");
+    cardHeader.setAttribute("class", "card-title");
+    cardHeader.innerHTML = value["title"];
 
-      var cardContent = document.createElement("p");
-      cardContent.setAttribute("class", "card-text");
-      for (var [key2, value2] of Object.entries(value1["links"])) {
-        var cardLink = document.createElement("a");
-        cardLink.setAttribute("href", value2["url"]);
-        cardLink.innerHTML = value2["name"];
-        var linkContainer = document.createElement("p");
-        linkContainer.appendChild(cardLink)
-        cardContent.appendChild(linkContainer);
-      }
-      
-      var cardBlock = document.createElement("div");
-      cardBlock.setAttribute("class", "card-block");
-      cardBlock.appendChild(cardHeader);
-      cardBlock.appendChild(cardContent);
-
-      var newCard = document.createElement("div");
-      newCard.setAttribute("class", "card text-center");
-      newCard.appendChild(cardBlock);
-
-      document.getElementById("cards").appendChild(newCard);
+    var cardContent = document.createElement("p");
+    cardContent.setAttribute("class", "card-text");
+    for (var [key1, value1] of Object.entries(value["links"])) {
+      var cardLink = document.createElement("a");
+      cardLink.setAttribute("href", value1["url"]);
+      cardLink.innerHTML = value1["name"];
+      var linkContainer = document.createElement("p");
+      linkContainer.appendChild(cardLink)
+      cardContent.appendChild(linkContainer);
     }
+    
+    var cardBlock = document.createElement("div");
+    cardBlock.setAttribute("class", "card-block");
+    cardBlock.appendChild(cardHeader);
+    cardBlock.appendChild(cardContent);
+
+    var newCard = document.createElement("div");
+    newCard.setAttribute("class", "card text-center");
+    newCard.appendChild(cardBlock);
+
+    document.getElementById("cards").appendChild(newCard);
+  //}
   }
 }
 
