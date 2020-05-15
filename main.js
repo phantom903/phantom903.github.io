@@ -42,5 +42,9 @@ function populateCards(jsonData) {
     document.getElementById("cards").appendChild(newCard);
   //}
   }
+  drawDoc(jsonData);
 }
 
+function drawDoc(jsonData) {
+  document.body.style.backgroundColor = jsonData["pallettes"]["default"]["bgcolor"];
+}

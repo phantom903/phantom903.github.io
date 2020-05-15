@@ -51,5 +51,38 @@
         }
       ]
     }
+  ],
+  "pallettes": [
+    {
+      "name": "default",
+      "bgcolor": "#272822",
+      "fgcolor": "#f8f8f2",
+      "colors": [
+        {
+          "col": "#75715e"
+        },
+        {
+          "col": "#f92672"
+        },
+        {
+          "col": "#fd971f"
+        },
+        {
+          "col": "#e69f66"
+        },
+        {
+          "col": "#e6db74"
+        },
+        {
+          "col": "#a6e22e"
+        },
+        {
+          "col": "#66d9ef"
+        },
+        {
+          "col": "#ae81ff"
+        }
+      ]
+    }
   ]
 }
