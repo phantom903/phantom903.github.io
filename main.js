@@ -21,11 +21,10 @@ function populateCards(jsonData) {
 
       var cardContent = document.createElement("p");
       cardContent.setAttribute("class", "card-text");
-      for (var [url, name] of Object.entries(value1["links"])) {
-        console.log(url);
+      for (var [key2, value2] of Object.entries(value1["links"])) {
         var cardLink = document.createElement("a");
-        cardLink.setAttribute("href", `${url}`);
-        cardLink.innerHTML = `${name}`;
+        cardLink.setAttribute("href", value2["url"]);
+        cardLink.innerHTML = value2["name"];
         cardContent.appendChild(cardLink);
       }
       
