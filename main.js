@@ -62,5 +62,6 @@ function drawDoc(jsonData) {
   var alllinks = document.getElementsByTagName("a");
   for (var i = 0; i < alllinks.length; i++) {
     alllinks[i].style.color = pallette[Math.floor(Math.random() * pallette.length)];
+    document.styleSheets[0].insertRule(".a:hover {" + jsonData["pallettes"][0]["fgcolor"] + "}", document.styleSheets[0].cssRules.length);
   }
 }
