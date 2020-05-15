@@ -57,4 +57,10 @@ function drawDoc(jsonData) {
     cardtitles[i].style.color = jsonData["pallettes"][0]["fgcolor"];
   }
   document.getElementById("welcome").style.color = jsonData["pallettes"][0]["fgcolor"];
+  var pallette = new Array();
+  pallette = jsonData["pallettes"][0]["colors"];
+  var alllinks = document.getElementsByTagName("a");
+  for (var i = 0; i < alllinks.length; i++) {
+    alllinks[i].style.color = pallette[Math.floor(Math.random() * pallette.length)];
+  }
 }
