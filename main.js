@@ -7,8 +7,8 @@ function loadJson() {
   xmlRequest.send();
   xmlRequest.onload = function () {
     json = request.response;
+    console.log(request.response);
   }
-  console.log(json);
   return JSON.parse(json);
 }  
 
