@@ -5,11 +5,11 @@
       "links": [
         {
           "name": "reddit",
-          "url": "http://www.reddit.com"
+          "url": "https://www.reddit.com"
         },
         {
           "name": "bbc news",
-          "url": "http://www.bbc.com/news"
+          "url": "https://www.bbc.com/news"
         }
       ]
     },
@@ -35,7 +35,7 @@
       "links": [
         {
           "name": "r/gaming",
-          "url": "http://www.reddit.com/r/gaming"
+          "url": "https://www.reddit.com/r/gaming"
         },
         {
           "name": "fanatical",
@@ -48,6 +48,27 @@
         {
           "name": "steam",
           "url": "https://store.steampowered.com"
+        }
+      ]
+    },
+    {
+      "title": "dev",
+      "links": [
+        {
+          "name": "github",
+          "url": "https://github.com"
+        },
+        {
+          "name": "vs code",
+          "url": "https://online.visualstudio.com/login"
+        },
+        {
+          "name": "udemy",
+          "url": "https://udemy.com"
+        },
+        {
+          "name": "ecoweb",
+          "url": "https://www.ecowebhosting.co.uk/cp/login"
         }
       ]
     }
