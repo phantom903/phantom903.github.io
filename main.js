@@ -46,5 +46,5 @@ function populateCards(jsonData) {
 }
 
 function drawDoc(jsonData) {
-  document.body.style.backgroundColor = jsonData["pallettes"]["default"]["bgcolor"];
+  document.body.style.backgroundColor = jsonData["pallettes"][0]["bgcolor"];
 }
