@@ -75,9 +75,15 @@
   ],
   "pallettes": [
     {
-      "name": "default",
+      "name": "monokai",
       "bgcolor": "#272822",
       "fgcolor": "#f8f8f2",
+      "colors": [ "#75715e", "#f92672", "#fd971f", "#e69f66", "#e6db74", "#a6e22e", "#66d9ef", "#ae81ff" ]
+    },
+    {
+      "name": "monokai-light",
+      "bgcolor": "#f8f8f2",
+      "fgcolor": "#272822",
       "colors": [ "#75715e", "#f92672", "#fd971f", "#e69f66", "#e6db74", "#a6e22e", "#66d9ef", "#ae81ff" ]
     }
   ]

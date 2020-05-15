@@ -1,15 +1,15 @@
-function loadJson() {
+function loadJson(theme) {
 //  var json = require("./settings.json");
   var xmlRequest = new XMLHttpRequest();
   xmlRequest.open("GET", "https://phantom903.github.io/settings.json");
   xmlRequest.responseType = "json";
   xmlRequest.send();
   xmlRequest.onload = function () {
-    populateCards(xmlRequest.response);
+    populateCards(xmlRequest.response, theme);
   }
 }  
 
-function populateCards(jsonData) {
+function populateCards(jsonData, theme) {
   //var jsonData = JSON.parse(json);
   for (var [key, value] of Object.entries(jsonData["cards"])) {
     //console.log(value);
@@ -42,36 +42,35 @@ function populateCards(jsonData) {
     document.getElementById("cards").appendChild(newCard);
   //}
   }
-  drawDoc(jsonData);
+  drawDoc(jsonData, theme);
 }
 
-function drawDoc(jsonData) {
-  pallette = jsonData["pallettes"][0];
-  console.log(pallette);
-  document.body.style.backgroundColor = jsonData["pallettes"][0]["bgcolor"];
-  document.getElementById("jumbotron").style.backgroundColor = jsonData["pallettes"][0]["bgcolor"];
+function drawDoc(jsonData, theme) {
+  var pallette = jsonData["pallettes"][theme];
+  document.body.style.backgroundColor = pallette["bgcolor"];
+  document.getElementById("jumbotron").style.backgroundColor = pallette["bgcolor"];
   var cards = document.getElementsByClassName("card");
   for (var i = 0; i < cards.length; i++) {
-    cards[i].style.backgroundColor = jsonData["pallettes"][0]["bgcolor"];
+    cards[i].style.backgroundColor = pallette["bgcolor"];
   }
   var cardtitles = document.getElementsByClassName("card-title");
   for (var i = 0; i < cardtitles.length; i++) {
-    cardtitles[i].style.color = jsonData["pallettes"][0]["fgcolor"];
+    cardtitles[i].style.color = pallette["fgcolor"];
   }
-  document.getElementById("welcome").style.color = jsonData["pallettes"][0]["fgcolor"];
-  var pallette = new Array();
-  pallette = jsonData["pallettes"][0]["colors"];
+  document.getElementById("welcome").style.color = pallette["fgcolor"];
+  var palletteCols = new Array();
+  palletteCols = pallette["colors"];
   var alllinks = document.getElementsByTagName("a");
   for (var i = 0; i < alllinks.length; i++) {
-    alllinks[i].style.color = pallette[Math.floor(Math.random() * pallette.length)];
+    alllinks[i].style.color = palletteCols[Math.floor(Math.random() * palletteCols.length)];
     alllinks[i].style.fontSize = "1.2rem";
     alllinks[i].style.textDecoration = "none";
   }
   $("a").hover(function () {
-    $(this).css("color", jsonData["pallettes"][0]["fgcolor"]);
+    $(this).css("color", pallette["fgcolor"]);
     $(this).css("font-size", "1.6rem");
   }, function () {
-      $(this).css("color", pallette[Math.floor(Math.random() * pallette.length)]);
+      $(this).css("color", palletteCols[Math.floor(Math.random() * palletteCols.length)]);
       $(this).css("font-size", "1.2rem");
   });
  }
