@@ -1,0 +1,61 @@
+{
+  "cards": [
+    {
+      "title": "daily",
+      "colour1": "#ffffff",
+      "colour2": "#abedsd",
+      "links": [
+        {
+          "name": "reddit",
+          "url": "http://www.reddit.com"
+        },
+        {
+          "name": "bbc news",
+          "url": "http://www.bbc.com/news"
+        }
+      ]
+    },
+    {
+      "title": "uni",
+      "colour1": "#ffffff",
+      "colour2": "#abedsd",
+      "links": [
+        {
+          "name": "ou studenthome",
+          "url": "https://msds.open.ac.uk/students/"
+        },
+        {
+          "name": "ou calendar",
+          "url": "https://learn2.open.ac.uk/calendar/view.php?view=month"
+        },
+        {
+          "name": "sfw",
+          "url": "https://logon.slc.co.uk/cas/login?_locale=en_CY"
+        }
+      ]
+    },
+    {
+      "title": "gaming",
+      "colour1": "#ffffff",
+      "colour2": "#abedsd",
+      "links": [
+        {
+          "name": "r/gaming",
+          "url": "http://www.reddit.com/r/gaming"
+        },
+        {
+          "name": "fanatical",
+          "url": "https://www.fanatical.com/en/"
+        },
+        {
+          "name": "humble",
+          "url": "https://www.humblebundle.com/"
+        },
+        {
+          "name": "steam",
+          "url": "https://store.steampowered.com"
+        }
+      ]
+    }
+  ]
+}
