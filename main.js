@@ -6,7 +6,7 @@ function loadJson() {
   xmlRequest.responseType = "json";
   xmlRequest.send();
   xmlRequest.onload = function () {
-    json = xmlRequest.response;
+    let json = xmlRequest.response;
     console.log(xmlRequest.response);
   }
   console.log(json);
