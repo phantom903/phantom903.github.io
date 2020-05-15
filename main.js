@@ -9,6 +9,7 @@ function loadJson() {
     json = xmlRequest.response;
     console.log(xmlRequest.response);
   }
+  console.log(json);
   return JSON.parse(json);
 }  
 
