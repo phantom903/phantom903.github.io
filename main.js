@@ -2,7 +2,7 @@ function loadJson() {
 //  var json = require("./settings.json");
   var json;
   var xmlRequest = new XMLHttpRequest();
-  xmlRequest.open("GET", "http://phantom903.github.io/settings.json");
+  xmlRequest.open("GET", "https://phantom903.github.io/settings.json");
   xmlRequest.responseType = "json";
   xmlRequest.send();
   xmlRequest.onload = function () {
