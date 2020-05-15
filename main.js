@@ -14,23 +14,26 @@ function populateCards(jsonData) {
   for (var [key, value] of Object.entries(jsonData)) {
     //console.log(value);
     for (var [key1, value1] of Object.entries(value)) {
-      console.log(key1, value1);
+      //console.log(key1, value1);
+      var cardHeader = document.createElement("h4");
+      cardHeader.setAttribute("class", "card-title");
+      cardHeader.innerHTML = value1["title"];
+
+      var cardContent = document.createElement("p");
+      cardContent.setAttribute("class", "card-text");
+      for (var [url, name] of Object.entries(value1["links"])) {}
+        var cardLink = document.createElement("a");
+        cardLink.setAttribute("href", url);
+        cardLink.innerHTML = name;
+        cardContent.appendChild(cardLink);
+      }
     }
   }
   // Object.entries(jsonData).forEach(element => {
   //   console.log(element);
-  //   var cardHeader = document.createElement("h4");
-  //   cardHeader.setAttribute("class", "card-title");
-  //   cardHeader.innerHTML = element.title;
 
-  //   var cardContent = document.createElement("p");
-  //   cardContent.setAttribute("class", "card-text");
-  //   element.links.forEach(link => {
-  //     var cardLink = document.createElement("a");
-  //     cardLink.setAttribute("href", link.url);
-  //     cardLink.innerHTML = link.name;
-  //     cardContent.appendChild(cardLink);
-  //   })
+
+
 
   //   var cardBlock = document.createElement("div");
   //   cardBlock.setAttribute("class", "card-block");
@@ -42,4 +45,4 @@ function populateCards(jsonData) {
   //   newCard.appendChild(cardBlock);
   // });
 
-}
+
