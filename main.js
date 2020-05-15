@@ -1,5 +1,6 @@
 function loadJson() {
-  var json = require("./settings.json");
+//  var json = require("./settings.json");
+  var json = fetch("./settings.json");
   return JSON.parse(json);
 }  
 
