@@ -52,5 +52,9 @@ function drawDoc(jsonData) {
   for (var i = 0; i < cards.length; i++) {
     cards[i].style.backgroundColor = jsonData["pallettes"][0]["bgcolor"];
   }
-  document.getElementById("welcome").style.textDecorationColor = jsonData["pallettes"][0]["fgcolor"];
+  var cardtitles = document.getElementsByClassName("card-title");
+  for (var i = 0; i < cardtitles.length; i++) {
+    cardtitles[i].style.color = jsonData["pallettes"][0]["fgcolor"];
+  }
+  document.getElementById("welcome").style.color = jsonData["pallettes"][0]["fgcolor"];
 }
